@@ -3,7 +3,7 @@ var Messenger = function(el){
   var m = this;
 
   m.init = function(){
-    m.codeletters = "&#*+%?£@§$!%^()-~[]|\\/<>;:";
+    m.codeletters = "&#*+%?£@§$!%;:";
     m.message = 0;
     m.current_length = 0;
     m.fadeBuffer = false;
@@ -14,12 +14,16 @@ var Messenger = function(el){
       'Software Reverse Engineering',
       'Password Cracking',
       'Hash Collisions',
+      'BPG Route Hijacking',
       'Hardware Vulnerabilities',
       'Number Theory',
       'Public Key Infrastructure',
-      'Session Hijacking',
+      'TLS Session Hijacking',
       'Man-in-the-middle',
-      'Cool Things'
+      'Cool Things',
+      'World Domination',
+      'The Hacker Life',
+      'Having Fun'
     ];
 
     setTimeout(m.animateIn, 100);
@@ -82,7 +86,7 @@ var Messenger = function(el){
   };
 
   m.cycleText = function(){
-    m.message = m.message + 1;
+    m.message = (m.message + 1 + Math.floor(Math.random() * (m.messages.length-2))) % m.messages.length;
     if(m.message >= m.messages.length){
       m.message = 0;
     }
