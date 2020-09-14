@@ -98,6 +98,21 @@ body, html {
   letter-spacing: 10px;
 }
 
+a:link { /* changes how a link looks when you interact with it*/
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: blue;
+  text-decoration: none;
+}
+a:active {
+  color: red;
+}
+
 /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
 @media only screen and (max-device-width: 1366px) {
   .parallax {
