@@ -4,7 +4,6 @@ var Messenger = function(el){
 
   m.init = function(){
     m.codeletters = "&#*+%?£@§$!%;:";
-    m.message = 0;
     m.current_length = 0;
     m.fadeBuffer = false;
     m.messages = [
@@ -26,6 +25,7 @@ var Messenger = function(el){
       'Having Fun'
     ];
 
+    m.message = Math.floor(Math.random() * (m.messages.length+1));
     setTimeout(m.animateIn, 100);
   };
 
@@ -86,7 +86,7 @@ var Messenger = function(el){
   };
 
   m.cycleText = function(){
-    m.message = (m.message + 1 + Math.floor(Math.random() * (m.messages.length-2))) % m.messages.length;
+    m.message = Math.floor(Math.random() * (m.messages.length+1));
     if(m.message >= m.messages.length){
       m.message = 0;
     }
