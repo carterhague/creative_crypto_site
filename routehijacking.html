@@ -48,12 +48,27 @@
       change out all the signs on a stretch of freeway and reroute automobile traffic onto incorrect exits. BGP stands for Border Gateway Protocol, and it is the underlying routing protocol of the Internet. In other words, it provides directions so
       that traffic travels from one IP address
       to another as efficiently as possible. Because BGP is built on the assumption that interconnected networks are telling the truth about which IP addresses they own, route hijacking is nearly impossible to stop, which can be an issue.</p>
-      <h1>Applications</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <h1>Practical Example: Censorship</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <h1>Practical Example: Traffic Interception</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h1>Applications</h1>
+    <p>BGP route hijacking (sometimes referred to as prefix hijacking, route hijacking or IP hijacking) is the illegitimate takeover of groups of IP addresses by corrupting Internet routing tables maintained using the Border Gateway Protocol. This
+      type of attack allows attackers to reroute
+      internet traffic wherever and however they want. This means that BGP route hijacking can be used to censor data, intercept traffic, redirect to illegetimate endpoints, or even conduct DDOS attacks on other services.</p>
+    <p>The concept of BGP hijacking revolves around locating an ISP that is not filtering advertisements (intentionally or otherwise) or locating an ISP whose internal or ISP-to-ISP BGP session is susceptible to a man-in-the-middle attack. Once
+      located, an attacker can potentially advertise any prefix they want, causing some or all traffic to be diverted from the real source towards the attacker. This can be done either to overload the ISP the attacker has infiltrated, or to perform a
+      DoS or impersonation attack on the entity whose prefix is being advertised. It is not uncommon for an attacker to cause serious outages, up to and including a complete loss of connectivity.</p>
+    <h1>Funny Fail: Censorship</h1>
+    <p>Sometimes network operators want to deny information from coming from or going to specific service endpoints—They want to censor certian data. In 2008, Pakistan's attempt to censor YouTube services within the country failed when a BGP route
+      prefix was announced incorrectly. The route was meant to force all connections coming from Pakistan to pass through a few control stations before being allowed to connect with the YouTube servers, but the route was specified incorrectly. This
+      caused all of the global YouTube traffic to flow through a few Pakastani telecommunication centers. Clearly these processing centers did not have the equipment to correctly route all of this data, and as a result YouTube was blocked worldwide
+      for about a day while global network operators had to reset routing tables and correctly propogate the valid BGP routes.</p>
+    <h1>Practical Example: Traffic Interception</h1>
+    <p>Route Hijacking mainly happens in a few ways.</p>
+    <ul>
+      <li>A network announces that it originates a prefix that it does not actually originate.</li>
+      <li>A network announces a more specific prefix than what was announced by the true originating network.</li>
+      <li>A network announces that it can route traffic to the hijacked network through a shorter route than is already available, regardless of whether or not the route actually exists.</li>
+    </ul>
+    <p>Any of these techniques, or even combinations of them, can be used to route data through attacker controlled networks. Once the data enters an attacker's network, the traffic can be analyzed, terminated, monitored, or modified however the
+      attacker wants. In practice these attacks are nearly impossible to stop because they take advantage of the fundamental structure and protocols of router networks. If network operators are malicious, they can do whatever they please.</p>
   </div>
 
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
