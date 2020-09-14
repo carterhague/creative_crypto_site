@@ -91,7 +91,7 @@ body, html {
 }
 
 .caption span.border {
-  background-color: #222;;
+  background-color: #222;
   color: #f7f7f7;
   padding: 18px;
   font-size: 25px;
@@ -111,6 +111,15 @@ a:hover {
 }
 a:active {
   color: red;
+}
+
+.basicimage {
+  display: block;
+  width: 60%;
+  background-color: #ddd;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
