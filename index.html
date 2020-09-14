@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css" />
+  <title>Crypto</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ddd;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sections
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Cipher Design</a>
+            <a class="dropdown-item" href="#">Cryptanalysis</a>
+            <a class="dropdown-item" href="#">Password Cracking</a>
+            <a class="dropdown-item" href="#">Route Hijacking</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="full_element">
+    <p class='caption' id="static_message">An intro to:</p>
+    <p class='caption' id="messenger"></p>
+  </div>
+  <div class='parallax image-1'>
+    <div class='caption'>
+      <span class="border">Cipher Design</span>
+    </div>
+  </div>
+  <div class='description'>
+    <p>Cipher design is norotiously difficult, and the security of cipher designs can mean the difference between life and death. Modern block cipher designs are often based on the idea of an iterated product cipher. In 1949, Claude Shannon analyzed
+      product ciphers and suggested them as a means of effectively improving security by combining simple operations such as substitutions and permutations. Iterated product ciphers carry out encryption in multiple rounds, each of which uses a
+      different subkey derived from the original key. One widespread implementation of such ciphers, named a Feistel network after Horst Feistel, is implemented in the DES cipher. Many other block ciphers, such as AES, are classified as
+      substitution–permutation networks. Block ciphers can be operated in many different modes to achieve different functionality, and can therefore serve as the building block for many cryptosystems.</p>
+  </div>
+  <div class='parallax image-2'>
+    <div class='caption'>
+      <span class="border">Cryptanalysis</span>
+    </div>
+  </div>
+  <div class='description'>
+    <p>Cryptanalysis is the study of analyzing information systems in order to learn about the hidden aspects of the systems. Cryptanalysis is used to breach cryptographic security systems and gain access to the contents of encrypted messages,
+      especially when the key is unknown.
+      In addition to mathematical analysis of cryptographic algorithms, cryptanalysis includes the study of side-channel attacks that do not target weaknesses in the cryptographic algorithms, but instead exploit weaknesses in their implementation.
+      Even though the goal of cryptanalysis has always been the same, the methods and techniques have changed drastically through the history of cryptography, adapting to increasing cryptographic complexity, ranging from the pen-and-paper methods of
+      the past, through machines
+      like the British Bombes and Colossus computers at Bletchley Park in World War II, to the mathematically advanced computerized schemes of the present.
+    </p>
+  </div>
+  <div class='parallax image-3'>
+    <div class='caption'>
+      <span class="border">Password Cracking</span>
+    </div>
+  </div>
+  <div class='description'>
+    <p>Password cracking is the process of recovering unknown passwords from data that has been stored or transmitted by a computer system. A common approach is to repeatedly try guesses for the password and to check them against an available
+      cryptographic hash of the password.
+      More common methods of password cracking, such as dictionary attacks, pattern checking, word list substitution, etc. attempt to reduce the number of trials required and will usually be attempted before brute force. Higher password bit strength
+      exponentially increases the
+      number of candidate passwords that must be checked, on average, to recover the password and reduces the likelihood that the password will be found in any cracking dictionary.</p>
+  </div>
+  <div class='parallax image-4'>
+    <div class='caption'>
+      <span class="border">Route Hijacking</span>
+    </div>
+  </div>
+  <div class='description'>
+    <p>Route hijacking is when attackers maliciously reroute Internet traffic. Attackers usually accomplish this by falsely announcing ownership of groups of IP addresses, called IP prefixes, that they do not actually own, control, or route to. A
+      route hijack is much like if someone were to
+      change out all the signs on a stretch of freeway and reroute automobile traffic onto incorrect exits. BGP stands for Border Gateway Protocol, and it is the underlying routing protocol of the Internet. In other words, it provides directions so
+      that traffic travels from one IP address
+      to another as efficiently as possible. Because BGP is built on the assumption that interconnected networks are telling the truth about which IP addresses they own, route hijacking is nearly impossible to stop, which can be an issue.</p>
+  </div>
+
+  <div class='description white centered'></div>
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script src="messenger.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>

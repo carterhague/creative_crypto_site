@@ -1,0 +1,106 @@
+* {   /* gets rid of default margin and padding from browser */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #222;
+  color: #f0f0f0;
+}
+
+#messenger {
+  font-family: monospace;
+  font-size: 40px;
+  white-space: nowrap;
+  text-shadow: 0 2px 2px rgba(#000, 0.9);
+  color: #f7f7f7;
+}
+
+#static_message {
+  font-family: monospace;
+  font-size: 40px;
+  white-space: nowrap;
+  text-shadow: 0 2px 2px rgba(#000, 0.9);
+  color: #f7f7f7;
+}
+
+body, html {
+  height: 100%;
+}
+
+.full_element {
+  height: 100%;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("images/test_pattern.jpg");
+
+  /* Full height */
+  height: 100%;
+  min-height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image-1 {
+  background-image: url("images/enigma.jpg");
+}
+
+.image-2 {
+  background-image: url("images/navy_bombe.jpg");
+}
+
+.image-3 {
+  background-image: url("images/password.jpg");
+}
+
+.image-4 {
+  background-image: url("images/router.jpg");
+}
+
+.description{
+  color:#ddd;
+  background-color:#222;
+  text-align:center;
+  padding:50px 80px;
+  text-align: justify;
+}
+
+.white{
+  background-color:#ddd;
+  color: #222;
+}
+
+.centered {
+  text-align: center;
+}
+
+.caption {
+  position: relative;
+  left: 0;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #222;;
+  color: #f7f7f7;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
